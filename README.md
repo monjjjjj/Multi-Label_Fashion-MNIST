@@ -14,6 +14,23 @@ label: 按照10種類別順序標示圖片中實際有哪些類別
 
 real_int: 圖片中依序出現的類別有哪些 
 
+### 訓練過程
+![1](https://user-images.githubusercontent.com/62006029/197928915-1e2063c0-e0ca-4167-8f78-dba34f69a01b.png)
+
+圖片上方為accuracy history，下方為loss history
+
+可觀察出初步訓練過程中準確度只能維持在30%以下，但loss都是很低的!
+
+目前仍在思考為何準確度會只有30%? 如何提高它?
+
+### Hint for multi-label classification 
+1. 不能直接使用one-hot encoding
+
+2. 因為是要做multi-label classification，每個類別的輸出是獨立的，因此使用binary_crossentropy
+
+3. 模型的最後一層要使用sigmoid function而不是softmax function
+
+
 
 
 
